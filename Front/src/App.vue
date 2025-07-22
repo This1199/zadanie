@@ -1,7 +1,6 @@
 <template>
   <div class="main-layout">
     <div class="app-container">
-      <!-- Ваш текущий код с деревом и формой -->
       <div class="header">
         <h1>Организационная структура</h1>
         <div class="add-form">
@@ -108,7 +107,6 @@ const submitDivision = async () => {
 
 onMounted(() => {
   divisionStore.fetchDivisions()
-  // Загружаем сотрудников для первого подразделения при загрузке
   if (divisionStore.divisions.length > 0) {
     divisionStore.setSelectedDivision(divisionStore.divisions[0])
   }
@@ -124,7 +122,7 @@ watch(() => divisionStore.selectedDivision, async (division) => {
 <style scoped>
 .main-layout {
   display: flex;
-  gap: 20px; /* Расстояние между колонками */
+  gap: 20px;
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
@@ -134,7 +132,7 @@ watch(() => divisionStore.selectedDivision, async (division) => {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 25%;
   min-height: 100vh;
-  flex: 1 1 40%; /* Левая колонка занимает примерно 40% ширины */
+  flex: 1 1 40%;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -143,7 +141,7 @@ watch(() => divisionStore.selectedDivision, async (division) => {
 }
 
 .people-cards-container {
-  flex: 1 1 55%; /* Правая колонка занимает примерно 55% ширины */
+  flex: 1 1 55%;
   max-width: 75%;
   background: white;
   border-radius: 8px;

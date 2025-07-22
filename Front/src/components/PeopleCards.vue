@@ -31,7 +31,6 @@
         <p><strong>Должность:</strong> {{ person.position || 'Не указана' }}</p>
         <p v-if="person.email"><strong>Email:</strong> {{ person.email }}</p>
         <p v-if="person.phone"><strong>Телефон:</strong> {{ person.phone }}</p>
-        <!-- Добавлено -->
         <p v-if="person.birth_date"><strong>Дата рождения:</strong> {{ formatDate(person.birth_date) }}</p>
         <p v-if="person.hire_date"><strong>Дата приема:</strong> {{ formatDate(person.hire_date) }}</p>
       </div>
