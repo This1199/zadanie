@@ -29,18 +29,15 @@
         </div>
       </div>
     </div>
-
-    
-      <PeopleCards 
-        v-if="divisionStore.selectedDivision"
-        :people="personStore.people"
-        :divisionId="divisionStore.selectedDivision.id" 
-        :divisionName="divisionStore.selectedDivision.name"
-        :loading="personStore.loading"
-        :error="personStore.error"
-        :level="divisionStore.selectedDivision.level"
-      />
-   
+    <PeopleCards 
+      v-if="divisionStore.selectedDivision"
+      :people="personStore.people"
+      :divisionId="divisionStore.selectedDivision.id" 
+      :divisionName="divisionStore.selectedDivision.name"
+      :loading="personStore.loading"
+      :error="personStore.error"
+      :level="divisionStore.selectedDivision.level"
+    />
     <AddDivisionModal
       :visible="showAddRootModal"
       @added="handleAddRootDivision"
